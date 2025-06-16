@@ -1,0 +1,160 @@
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 72px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__location-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+  }
+
+  &__location-arrow {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+      &:hover {
+        color: #ff2c45;
+      }
+    }
+  }
+
+  &__lang {
+    margin-left: 24px;
+    img {
+      width: 84px;
+      height: 35px;
+      display: block;
+    }
+  }
+
+  &__burger {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 24px;
+    span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background: #fff;
+      margin: 3px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__container {
+      padding: 0 16px;
+      height: 64px;
+    }
+    &__left {
+      gap: 16px;
+    }
+    &__nav {
+      justify-content: space-between;
+      width: 45%;
+      gap: 16px;
+    }
+    &__menu {
+      gap: 16px;
+    }
+    &__lang {
+      margin-left: 12px;
+    }
+    &__burger {
+      margin-left: 12px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      height: 56px;
+    }
+    &__menu {
+      display: none;
+    }
+    &__location {
+      display: none;
+    }
+    &__burger {
+      display: flex;
+    }
+  }
+}
