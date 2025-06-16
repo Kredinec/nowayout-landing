@@ -1,3 +1,7 @@
+@use './blocks/header';
+@use './blocks/slider';
+@use './blocks/footer';
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
